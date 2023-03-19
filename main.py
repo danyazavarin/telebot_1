@@ -31,6 +31,8 @@ def info(message):
         bot.send_message(message.chat.id, 'Привет')
     elif message.text.lower() == 'id':
         bot.reply_to(message, f'ID: {message.from_user.id}')
+    else:
+        bot.send_message(message.chat.id, 'Я не понимаю, что вы написали')
 
 
 # bot.infinity_polling()
