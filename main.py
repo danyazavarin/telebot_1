@@ -6,12 +6,6 @@ from telebot import types
 bot = telebot.TeleBot("6103651064:AAFZsU649ZVl4i-pxEdn2h4fwccBtUrCqio")
 
 
-# пересылаю на свой сайт по команде
-@bot.message_handler(commands=['site', 'website'])
-def site():
-    webbrowser.open('https://github.com/danyazavarin')
-
-
 # приветствую по команде
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -46,6 +40,12 @@ def on_click(message):
 @bot.message_handler(commands=['help'])
 def main(message):
     bot.send_message(message.chat.id, "Help information")
+
+
+# пересылаю на свой сайт по команде
+@bot.message_handler(commands=['site', 'website'])
+def site():
+    webbrowser.open('https://github.com/danyazavarin')
 
 
 # отвечаю на фото
